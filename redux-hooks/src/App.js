@@ -1,7 +1,16 @@
 import React from "react";
+import { Provider } from "react-redux";
+
+import store from "./store";
+
+import CourseList from "./components/CourseList/index";
 
 function App() {
-  return <div className="App">React App Work's</div>;
+  return (
+    <Provider store={store}>
+      <CourseList />
+    </Provider>
+  );
 }
 
 export default App;
